@@ -1,0 +1,11 @@
+.score-box {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.score-box strong {
+    color: #00c6ff;
+}

@@ -1,0 +1,168 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+
+.container {
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* =========================
+   TÍTULO
+========================= */
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   PREGUNTA
+========================= */
+
+.question {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   RESPUESTAS
+========================= */
+
+.answers button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.answers button:hover {
+    transform: translateY(-2px);
+    background-color: #00c6ff;
+    color: white;
+}
+
+.answers button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* =========================
+   BOTONES GENERALES
+========================= */
+
+#nextBtn,
+#restartBtn {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #00c6ff;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+#nextBtn:hover,
+#restartBtn:hover {
+    background-color: #0095c9;
+}
+
+/* =========================
+   RESULTADO
+========================= */
+
+#result {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+/* Estados de respuesta */
+
+.correct {
+    background-color: #2ecc71 !important;
+    color: white !important;
+}
+
+.incorrect {
+    background-color: #e74c3c !important;
+    color: white !important;
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .question {
+        font-size: 18px;
+    }
+
+    .answers button {
+        font-size: 14px;
+    }
+}
